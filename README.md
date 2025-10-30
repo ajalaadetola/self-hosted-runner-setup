@@ -84,7 +84,7 @@ jobs:
 ---
 
 ## 📎 Repository Link
-🔗 [GitHub Repository – Self-Hosted Runner Setup](https://github.com/<your-username>/self-hosted-runner-setup)
+🔗 [GitHub Repository – Self-Hosted Runner Setup](https://github.com/ajalaadetola/self-hosted-runner-setup.git)
 
 ---
 
