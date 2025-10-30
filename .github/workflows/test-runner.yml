@@ -1,0 +1,25 @@
+name: Test Self-Hosted Runner
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Hello from self-hosted runner
+        run: |
+          echo "🎉 Success! Running on self-hosted Windows runner"
+          echo "Computer name: $env:COMPUTERNAME"
+          echo "User: $env:USERNAME"
+          dir
+          
+      - name: Create test file
+        run: echo "Hello from Windows self-hosted runner at $(Get-Date)" > test-output.txt
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-runner-test
+          path: test-output.txt
